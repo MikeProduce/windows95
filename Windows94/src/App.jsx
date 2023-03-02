@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className='bg-teal h-screen'>
-      hello
+      hello Stephany
       <StartMenu/>
     </div>
   )
