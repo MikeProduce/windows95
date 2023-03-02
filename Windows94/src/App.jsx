@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { StartMenu } from "./Navbar.jsx/StartMenu"
+import windows95 from '../icons/windows95.png'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <div>
-      Windows95
+    <div className='h-full w-full bg-teal'>
+      <img src={windows95} alt="" />
+      <StartMenu/>
     </div>
   )
 }
