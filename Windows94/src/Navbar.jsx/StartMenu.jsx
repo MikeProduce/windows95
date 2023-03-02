@@ -14,7 +14,7 @@ export const StartMenu = () => {
 
   return (
     <div className="bg-grayish border-t-2 border-gray pb-0.5 flex justify-between fixed bottom-0 w-full">
-        <NavigationModal/>
+        <NavigationModal isHidden={isClicked} />
       <button
         className={`flex border-2 m-1 px-1 ${
           isClicked ? 'border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray'

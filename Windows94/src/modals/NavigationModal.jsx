@@ -1,6 +1,8 @@
-export const NavigationModal = () => {
+export const NavigationModal = ({ isHidden }) => {
+    
+
     return (
-      <div className="absolute bottom-12 bg-grayish border-2 border-t-gray border-l-gray">
+      <div className={`absolute bottom-12 bg-grayish border-2 border-t-gray border-l-gray ${isHidden ? '' : 'hidden'}`}>
         <ul className="pl-10 relative">
           <li className="hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-2xl">Github</li>
           <li className="hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-2xl">Projects</li>
@@ -14,4 +16,7 @@ export const NavigationModal = () => {
       </div>
     );
   };
+  //The isHidden prop is used to conditionally add the hidden class to the div element using a ternary operator. 
+  //If isHidden is true, the hidden class is added, which will hide the modal. 
+  //If isHidden is false, the hidden class is not added, and the modal will be visible.
   
