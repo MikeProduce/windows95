@@ -2,6 +2,7 @@ import { useState } from 'react';
 import windows95 from '../icons/windows95.png';
 import { NavigationModal } from '../modals/NavigationModal';
 
+
 export const StartMenu = () => {
   const [isClicked, setIsClicked] = useState(false);
 

@@ -1,4 +1,5 @@
 import { StartMenu } from "./Navbar.jsx/StartMenu"
+import { WindowsModal } from "./modals/windowsModal"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div className='bg-teal h-screen'>
-      hello Stephany
+      <WindowsModal/>
       <StartMenu/>
     </div>
   )
