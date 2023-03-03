@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import windows95 from '../icons/windows95.png';
 import { NavigationModal } from '../modals/NavigationModal';
+import { useDispatch, useSelector} from 'react-redux';
 
 
 export const StartMenu = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const {cart,products} = useSelector((state) => state.cart)
+
 
   const handleClick = () => {
     setIsClicked(!isClicked);
