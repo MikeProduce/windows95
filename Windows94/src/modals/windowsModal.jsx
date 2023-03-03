@@ -1,11 +1,40 @@
-export const WindowsModal = () => {
+import {useEffect, useState} from 'react'
+import { useDispatch, useSelector} from 'react-redux';
+import { addToCart } from '../Redux/cartSlice.jsx';
+
+
+
+
+
+
+
+
+
+export const WindowsModal = ({onClose}) => {
+    const dispatch = useDispatch();
+    const [isVisible, setIsVisible] = useState(''); // Add state variable
+    const {cart} = useSelector((state) => state.cart)
+    console.log(cart);
+
+
+
+    const purchaseHandler = ( ) => {
+        const itemName = 'Welcome to my page'
+        let itemObj = {itemName};
+        dispatch(addToCart(itemObj));
+        setIsVisible('hidden'); // Update state variable to hide the modal
+    }
+
+   
+    
+
 
     return (
-        <div className="h-96 w-96 bg-white border-2 border-l-gray border-t-gray absolute top-32 left-20 border-r-darkGray border-b-darkGray flex flex-col">
+        <div className={`h-96 w-96 bg-white border-2 border-l-gray border-t-gray absolute top-32 left-20 border-r-darkGray border-b-darkGray flex flex-col ${isVisible}`}>
             <div className="p-.05 flex justify-between bg-navyblue text-white font-display">
                 <span className="ml-1 h-1/2">Welcome to my page</span>
                 <div className="py-1 h-5 flex items-center">
-                    <button className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-xl font-bold">_</button>
+                    <button onClick={purchaseHandler} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-xl font-bold">_</button>
                     <button className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-lg font-bold ">X</button>
                 </div>
             </div>
