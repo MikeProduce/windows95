@@ -10,7 +10,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { itemName } = action.payload; // destructure itemName from the action payload
-      state.cart = [...state.cart, { itemName }]; // add a new item to the cart array with the itemName
+      state.cart = [...state.cart, { itemName, isHidden: false }]; // add a new item to the cart array with the itemName and isHidden property set to false
     },
     removeToCart: (state, action) => {
       if (state.cart.length === 0) { // checking if the cart is empty
@@ -23,10 +23,17 @@ const cartSlice = createSlice({
         state.total = state.total - removed[0].itemPrice; // update the total price by subtracting the removed item's price
       }
     },
+    toggleHidden: (state, action) => {
+      const { itemName } = action.payload;
+      const item = state.cart.find((item) => item.itemName === itemName);
+      if (item) {
+        item.hidden = !item.hidden;
+      }
+    }
   },
 });
 
-export const { addToCart, removeToCart } = cartSlice.actions; // exporting the action creators
+export const { addToCart, removeToCart,toggleHidden} = cartSlice.actions; // exporting the action creators
 export default cartSlice.reducer; // exporting the reducer function
 
 

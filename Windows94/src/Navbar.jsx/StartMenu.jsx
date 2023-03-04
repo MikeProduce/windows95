@@ -2,21 +2,27 @@ import { useState } from 'react';
 import windows95 from '../icons/windows95.png';
 import { NavigationModal } from '../modals/NavigationModal';
 import { useDispatch, useSelector} from 'react-redux';
-import { removeToCart } from '../Redux/cartSlice';
+import { removeToCart,toggleHidden } from '../Redux/cartSlice';
 
 
 export const StartMenu = () => {
   const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
+  const [hidden,setHidden] = useState('')
   // console.log(cart);
 
   const purchaseHandler = ( ) => {
     const itemName = 'Welcome to my page'
     let itemObj = {itemName};
     dispatch(removeToCart(itemObj));
-    setIsVisible(false); // Update state variable to hide the modal
 }
+
+  const handleItemClick = (item) => {
+    console.log(item.itemName);
+    dispatch(toggleHidden(item.itemName));
+  }
+
 
 
   const handleClick = () => {
@@ -39,7 +45,7 @@ export const StartMenu = () => {
         <span className="my-auto px-1 font-display text-2xl font-bold">Start</span>
      </button>
       {cart.map((currentWindow, index) => (
-        <button onClick={purchaseHandler} className="border-t-gray border-l-gray flex border-2 m-1 px-1 font-display text-center text-2xl" key={index}>
+        <button onClick={handleItemClick(currentWindow)} className={`border-t-gray border-l-gray flex border-2 m-1 px-1 font-display text-center text-2xl ${currentWindow.hidden ?  'hidden': ''}`} key={index}>
       {currentWindow.itemName}
         </button>
       ))}
