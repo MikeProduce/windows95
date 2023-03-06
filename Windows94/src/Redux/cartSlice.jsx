@@ -10,7 +10,13 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { itemName } = action.payload; // destructure itemName from the action payload
-      state.cart = [...state.cart, { itemName, isHidden: false }]; // add a new item to the cart array with the itemName and isHidden property set to false
+      const item = state.cart.find((item) => item.itemName === itemName);
+      if (item) {
+        return;
+      } else {
+        state.cart = [...state.cart, { itemName, isHidden: false }];
+      }
+       // add a new item to the cart array with the itemName and isHidden property set to false
     },
     removeToCart: (state, action) => {
       if (state.cart.length === 0) { // checking if the cart is empty
@@ -24,10 +30,12 @@ const cartSlice = createSlice({
       }
     },
     toggleHidden: (state, action) => {
-      const { itemName } = action.payload;
+      const  itemName = action.payload;
+      console.log(itemName);
       const item = state.cart.find((item) => item.itemName === itemName);
+      console.log(item);
       if (item) {
-        item.hidden = !item.hidden;
+        item.isHidden = !item.isHidden;
       }
     }
   },

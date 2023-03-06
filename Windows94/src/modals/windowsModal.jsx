@@ -1,12 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCart } from '../Redux/cartSlice.jsx';
-
-
-
-
-
-
+import { addToCart, toggleHidden } from '../Redux/cartSlice.jsx';
 
 
 
@@ -14,7 +8,7 @@ export const WindowsModal = ({onClose}) => {
     const dispatch = useDispatch();
     const [isVisible, setIsVisible] = useState(''); // Add state variable
     const {cart} = useSelector((state) => state.cart)
-    console.log(cart);
+
 
 
 
@@ -24,8 +18,18 @@ export const WindowsModal = ({onClose}) => {
         dispatch(addToCart(itemObj));
         setIsVisible('hidden'); // Update state variable to hide the modal
     }
+    // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the cart arr 
+    // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
+    useEffect(() => {
+        if (cart.length === 0){
+            return;
+        } else if (cart[0].isHidden == true){
+            dispatch(toggleHidden('Welcome to my page'))
+            setIsVisible('')
+        }  
+    },[cart])
 
-   
+
     
 
 
