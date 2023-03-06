@@ -33,7 +33,6 @@ const cartSlice = createSlice({
       const  itemName = action.payload;
       console.log(itemName);
       const item = state.cart.find((item) => item.itemName === itemName);
-      console.log(item);
       if (item) {
         item.isHidden = !item.isHidden;
       }

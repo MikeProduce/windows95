@@ -17,6 +17,11 @@ export const WindowsModal = ({onClose}) => {
         let itemObj = {itemName};
         dispatch(addToCart(itemObj));
         setIsVisible('hidden'); // Update state variable to hide the modal
+        // if (cart.length === 0){
+        //     return;
+        // } else if (cart[0].isHidden == true){
+        //     setIsVisible('')
+        // }  
     }
     // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the cart arr 
     // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
@@ -24,7 +29,6 @@ export const WindowsModal = ({onClose}) => {
         if (cart.length === 0){
             return;
         } else if (cart[0].isHidden == true){
-            dispatch(toggleHidden('Welcome to my page'))
             setIsVisible('')
         }  
     },[cart])

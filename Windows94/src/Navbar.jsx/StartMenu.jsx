@@ -9,8 +9,7 @@ export const StartMenu = () => {
   const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
-  const [hidden,setHidden] = useState('')
-  // console.log(cart);
+  console.log(cart);
 
   const purchaseHandler = ( ) => {
     const itemName = 'Welcome to my page'
@@ -33,12 +32,12 @@ export const StartMenu = () => {
     if (cart.length === 0){
       return;
   } else if (cart[0].isHidden == true){
-    setisTrue('')
+    setisTrue('border-t-gray border-l-gray flex border-4')
   } else if (cart[0].isHidden == false) {
     setisTrue('border-t-gray border-l-gray flex border-2')
   }
 
-  })
+  },[handleItemClick])
 
     
   
