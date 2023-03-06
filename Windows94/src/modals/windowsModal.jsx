@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCart, toggleHidden } from '../Redux/cartSlice.jsx';
+import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
 
 
 
@@ -35,6 +35,12 @@ export const WindowsModal = ({onClose}) => {
         }
     },[cart])
 
+    const isRemoved = function (){ 
+        setIsVisible('hidden')
+        dispatch(removeToCart('Welcome to my page'))
+        console.log(cart);
+    }
+
 
     
 
@@ -45,7 +51,7 @@ export const WindowsModal = ({onClose}) => {
                 <span className="ml-1 h-1/2">Welcome to my page</span>
                 <div className="py-1 h-5 flex items-center">
                     <button onClick={purchaseHandler} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-xl font-bold">_</button>
-                    <button className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-lg font-bold ">X</button>
+                    <button onClick={isRemoved} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-lg font-bold ">X</button>
                 </div>
             </div>
             <div className="bg-grayish flex flex-col flex-1">

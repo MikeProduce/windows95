@@ -9,12 +9,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const { itemName } = action.payload; // destructure itemName from the action payload
-      const item = state.cart.find((item) => item.itemName === itemName);
+      const { itemName } = action.payload; // brings in the modal name
+      const item = state.cart.find((item) => item.itemName === itemName);// checks if the itemName is alreaedy in the array
       if (item) {
-        item.isHidden = !item.isHidden;
+        item.isHidden = !item.isHidden; // if the item name is already in the array but the current boolean value attached to the isHidden property then make it false
       } else {
-        state.cart = [...state.cart, { itemName, isHidden: false }];
+        state.cart = [...state.cart, { itemName, isHidden: false }];// else push this current itemName into the array and attach isHidden with a booleon. 
       }
        // add a new item to the cart array with the itemName and isHidden property set to false
     },
@@ -26,11 +26,10 @@ const cartSlice = createSlice({
       const index = state.cart.findIndex(item => item.itemName === itemName); // find the index of the item to remove from the cart array
       if (index !== -1) { // checking if the item exists in the cart array
         const removed = state.cart.splice(index, 1); // remove the item from the cart array
-        state.total = state.total - removed[0].itemPrice; // update the total price by subtracting the removed item's price
       }
     },
     toggleHidden: (state, action) => {
-      const  itemName = action.payload;
+      const  itemName = action.payload; 
       console.log(itemName);
       const item = state.cart.find((item) => item.itemName === itemName);
       if (item) {
