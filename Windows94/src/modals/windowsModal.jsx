@@ -30,7 +30,9 @@ export const WindowsModal = ({onClose}) => {
             return;
         } else if (cart[0].isHidden == true){
             setIsVisible('')
-        }  
+        }  else if (cart[0].isHidden == false){
+            setIsVisible('hidden');
+        }
     },[cart])
 
 

@@ -12,7 +12,7 @@ const cartSlice = createSlice({
       const { itemName } = action.payload; // destructure itemName from the action payload
       const item = state.cart.find((item) => item.itemName === itemName);
       if (item) {
-        return;
+        item.isHidden = !item.isHidden;
       } else {
         state.cart = [...state.cart, { itemName, isHidden: false }];
       }

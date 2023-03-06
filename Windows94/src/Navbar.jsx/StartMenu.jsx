@@ -11,12 +11,6 @@ export const StartMenu = () => {
   const {cart} = useSelector((state) => state.cart)
   console.log(cart);
 
-  const purchaseHandler = ( ) => {
-    const itemName = 'Welcome to my page'
-    let itemObj = {itemName};
-    dispatch(removeToCart(itemObj));
-}
-
   const handleItemClick = (item) => {
     const itemName = item.itemName
     dispatch(toggleHidden(itemName));
@@ -32,7 +26,7 @@ export const StartMenu = () => {
     if (cart.length === 0){
       return;
   } else if (cart[0].isHidden == true){
-    setisTrue('border-t-gray border-l-gray flex border-4')
+    setisTrue('border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray')
   } else if (cart[0].isHidden == false) {
     setisTrue('border-t-gray border-l-gray flex border-2')
   }
