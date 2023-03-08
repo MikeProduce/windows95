@@ -9,7 +9,7 @@ export const StartMenu = () => {
   const dispatch = useDispatch();
   const [isStartMenuClicked, setisStartMenuClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
-  console.log(cart);
+  // console.log(cart);
 
   const toggleCartItemVisibility = (item) => {
     dispatch(toggleHidden(item.itemName));
@@ -22,16 +22,10 @@ export const StartMenu = () => {
   const [cartButtoonStyle,setcartButtoonStyle] = useState('border-t-gray border-l-gray flex border-2')
 
   useEffect(() => {
-    if (cart.length === 0){
-      return;
-  } else if (cart[0].isHidden == true){
-    setcartButtoonStyle('border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray')
-  } else if (cart[0].isHidden == false) {
-    setcartButtoonStyle('border-t-gray border-l-gray flex border-2')
-  }
-
+    const item = cart.find((item) => item.itemName === item.itemName)
+    setcartButtoonStyle(item?.isHidden ? 'border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray flex border-2')
   },[cart])
-
+//trying to find unique names or modals on the nav bar
     
   
   //when this button is clicked we are changing the border colors to make seem as if the button has some depth
@@ -55,7 +49,6 @@ export const StartMenu = () => {
       {currentWindow.itemName}
         </button>
       ))}
-      
       <div className="my-auto ml-auto border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray font-display text-2xl">
         10:38AM
       </div>

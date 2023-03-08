@@ -22,10 +22,11 @@ const cartSlice = createSlice({
       if (state.cart.length === 0) { // checking if the cart is empty
         throw new Error('Cannot remove item from empty cart'); // throw an error if the cart is empty
       }
-      const { itemName } = action.payload; // destructure itemName from the action payload
+      const  itemName  = action.payload; // destructure itemName from the action payload
+      console.log(itemName);
       const index = state.cart.findIndex(item => item.itemName === itemName); // find the index of the item to remove from the cart array
       if (index !== -1) { // checking if the item exists in the cart array
-        const removed = state.cart.splice(index, 1); // remove the item from the cart array
+        state.cart.splice(index, 1); // remove the item from the cart array
       }
     },
     toggleHidden: (state, action) => {

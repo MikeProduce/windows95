@@ -40,10 +40,10 @@ export const NavigationModal = ({ isHidden }) => {
       }`}
     >
       <ul className="pl-10 relative">
-        {icons.map((icon) => (
+        {icons.map((icon,index) => (
           <li
             className="hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-3xl flex py-2"
-            key={icon.label}
+            key={index}
           >
             <img className="h-8 my-auto px-2" src={icon.icon} alt={icon.label} />
             {icon.label}
