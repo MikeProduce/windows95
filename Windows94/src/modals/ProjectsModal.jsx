@@ -62,10 +62,7 @@ export const ProjectsModal = ({onClose}) => {
                 </div>
                 <div className="h-full flex-1 my-1">
                     <div className="h-full bg-white text-center mx-1 py-2 border-2 border-t-black border-l-black border-r-gray border-b-gray">
-                        <h1 className="text-black font-display p-1">Hi im Miguel </h1>
-                        <p className="text-black font-display p-1">DEVELOPER AND DESIGNER</p>
-                        <p className="text-black font-display p-1">I'm fascinated by creative technology, and love to create visually immersive user experiences with code</p>
-                        <p className="text-black font-display p-1">I especially love web + mobile development, UI/UX and everything that comes with it!</p>
+                        YO THESE ARE MY PROJECTS YO
                     </div>
                 </div>
                 <div className="font-display mx-1 border-2 border-t-darkGray border-l-darkGray border-r-gray border-b-gray mb-1 text-xl">3 Objects</div>
