@@ -7,44 +7,43 @@ import { removeToCart,toggleHidden } from '../Redux/cartSlice';
 
 export const StartMenu = () => {
   const dispatch = useDispatch();
-  const [isClicked, setIsClicked] = useState(false);
+  const [isStartMenuClicked, setisStartMenuClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
   console.log(cart);
 
-  const handleItemClick = (item) => {
-    const itemName = item.itemName
-    dispatch(toggleHidden(itemName));
+  const toggleCartItemVisibility = (item) => {
+    dispatch(toggleHidden(item.itemName));
   }
 
   const handleClick = () => {
-    setIsClicked(!isClicked);
+    setisStartMenuClicked(!isStartMenuClicked);
   };
 
-  const [isTrue,setisTrue] = useState('border-t-gray border-l-gray flex border-2')
+  const [cartButtoonStyle,setcartButtoonStyle] = useState('border-t-gray border-l-gray flex border-2')
 
   useEffect(() => {
     if (cart.length === 0){
       return;
   } else if (cart[0].isHidden == true){
-    setisTrue('border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray')
+    setcartButtoonStyle('border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray')
   } else if (cart[0].isHidden == false) {
-    setisTrue('border-t-gray border-l-gray flex border-2')
+    setcartButtoonStyle('border-t-gray border-l-gray flex border-2')
   }
 
-  },[handleItemClick])
+  },[cart])
 
     
   
   //when this button is clicked we are changing the border colors to make seem as if the button has some depth
-  // the isClicked state starts off as false and when we set setIsClicked(!isClicked) it inverts whatever the current
+  // the isStartMenuClicked state starts off as false and when we set setisStartMenuClicked(!isStartMenuClicked) it inverts whatever the current
   //boolean value it contains
 
   return (
     <div className="bg-grayish border-t-2 border-gray pb-0.5 flex fixed bottom-0 w-full">
-      <NavigationModal isHidden={isClicked} />
+      <NavigationModal isHidden={isStartMenuClicked} />
         <button
           className={`flex border-2 m-1 px-1 ${
-          isClicked ? 'border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray'
+            isStartMenuClicked ? 'border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray'
           }`}
         onClick={handleClick}
         >
@@ -52,7 +51,7 @@ export const StartMenu = () => {
         <span className="my-auto px-1 font-display text-2xl font-bold">Start</span>
      </button>
       {cart.map((currentWindow, index) => (
-        <button onClick={() => handleItemClick(currentWindow)} className={`${isTrue} m-1 px-1 font-display text-center text-2xl`} key={index}>
+        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtoonStyle} m-1 px-1 font-display text-center text-2xl`} key={index}>
       {currentWindow.itemName}
         </button>
       ))}

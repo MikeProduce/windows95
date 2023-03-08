@@ -38,7 +38,6 @@ export const WindowsModal = ({onClose}) => {
     const isRemoved = function (){ 
         setIsVisible('hidden')
         dispatch(removeToCart('Welcome to my page'))
-        console.log(cart);
     }
 
 
