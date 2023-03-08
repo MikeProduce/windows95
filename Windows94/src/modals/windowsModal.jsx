@@ -22,9 +22,9 @@ export const WindowsModal = ({onClose}) => {
         const isModalInCart = cart.some((item) => item.itemName === 'Welcome to my page');
         if (isModalInCart) {
             const index = cart.findIndex(item => item.itemName === 'Welcome to my page');
-            console.log(index);
+            // console.log(index);
             setmodalVisibility(cart[index].isHidden ? '' : 'hidden');
-            console.log(index);
+            // console.log(index);
           } else return;
     }, [cart]);
 

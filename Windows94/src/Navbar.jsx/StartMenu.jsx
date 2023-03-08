@@ -19,13 +19,16 @@ export const StartMenu = () => {
     setisStartMenuClicked(!isStartMenuClicked);
   };
 
-  const [cartButtoonStyle,setcartButtoonStyle] = useState('border-t-gray border-l-gray flex border-2')
 
-  useEffect(() => {
-    const item = cart.find((item) => item.itemName === item.itemName)
-    setcartButtoonStyle(item?.isHidden ? 'border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray flex border-2')
-  },[cart])
-//trying to find unique names or modals on the nav bar
+  const cartButtonStyles = cart.map((currentWindow) => { // we map over the cart and every variable inside contains all itemName along with the isHidden variable that determines 
+    //whether the modal is open or not.
+    console.log(currentWindow) // also not the way we keep track of the index number is because when the items are insterted into the array they are inserted in a specifc or which is why they match
+    const cartButtonStyle = currentWindow.isHidden // we then look at the isHidden variable and determine whether its true or false
+      ? 'border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray' //if it is false then we select this style on the button
+      : 'border-t-gray border-l-gray flex border-2'; //if it is true we select this one.
+    return cartButtonStyle; // this variable will contain the style we need based on the true or false value
+  });
+
     
   
   //when this button is clicked we are changing the border colors to make seem as if the button has some depth
@@ -45,7 +48,7 @@ export const StartMenu = () => {
         <span className="my-auto px-1 font-display text-2xl font-bold">Start</span>
      </button>
       {cart.map((currentWindow, index) => (
-        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtoonStyle} m-1 px-1 font-display text-center text-2xl`} key={index}>
+        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtonStyles[index]} m-1 px-1 font-display text-center text-2xl`} key={index}>
       {currentWindow.itemName}
         </button>
       ))}

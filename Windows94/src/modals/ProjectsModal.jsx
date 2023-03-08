@@ -23,7 +23,7 @@ export const ProjectsModal = ({onClose}) => {
         const isModalInCart = cart.some((item) => item.itemName === 'Projects');
         if (isModalInCart) {
             const index = cart.findIndex(item => item.itemName === 'Projects');
-            console.log(index);
+            // console.log(index);
             setmodalVisibility(cart[index].isHidden ? '' : 'hidden');
         } else return;
         
