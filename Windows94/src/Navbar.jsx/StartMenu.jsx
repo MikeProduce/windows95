@@ -22,7 +22,7 @@ export const StartMenu = () => {
 
   const cartButtonStyles = cart.map((currentWindow) => { // we map over the cart and every variable inside contains all itemName along with the isHidden variable that determines 
     //whether the modal is open or not.
-    console.log(currentWindow) // also not the way we keep track of the index number is because when the items are insterted into the array they are inserted in a specifc or which is why they match
+    console.log(currentWindow) // also the way we keep track of the index number is because when the items are insterted into the array they are inserted in a specifc index which is why they match
     const cartButtonStyle = currentWindow.isHidden // we then look at the isHidden variable and determine whether its true or false
       ? 'border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray' //if it is false then we select this style on the button
       : 'border-t-gray border-l-gray flex border-2'; //if it is true we select this one.

@@ -14,9 +14,9 @@ const cartSlice = createSlice({
       if (item) {
         item.isHidden = !item.isHidden; // if the item name is already in the array but the current boolean value attached to the isHidden property then make it false
       } else {
-        state.cart = [...state.cart, { itemName, isHidden: false }];// else push this current itemName into the array and attach isHidden with a booleon. 
+        state.cart = [...state.cart, { itemName, isHidden: true }];// else push this current itemName into the array and attach isHidden with a booleon. 
       }
-       // add a new item to the cart array with the itemName and isHidden property set to false
+       // add a new item to the cart array with the itemName and isHidden property set to true which will show the modal
     },
     removeToCart: (state, action) => {
       if (state.cart.length === 0) { // checking if the cart is empty

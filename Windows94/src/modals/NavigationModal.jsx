@@ -4,8 +4,13 @@ import Aboutme from '../icons/Aboutme.png';
 import Resume from '../icons/Resume.png';
 import technologies from '../icons/technologies.png';
 import shutdown from '../icons/shutdown.png';
+import { useDispatch, useSelector} from 'react-redux';
+import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
+
 
 export const NavigationModal = ({ isHidden }) => {
+  const dispatch = useDispatch();
+  
   const icons = [
     {
       icon: github,
@@ -14,6 +19,7 @@ export const NavigationModal = ({ isHidden }) => {
     {
       icon: folder,
       label: 'Projects',
+      title: 'Projects'
     },
     {
       icon: Resume,
@@ -22,6 +28,7 @@ export const NavigationModal = ({ isHidden }) => {
     {
       icon: Aboutme,
       label: 'About me',
+      title: 'Welcome to my page'
     },
     {
       icon: technologies,
@@ -33,6 +40,11 @@ export const NavigationModal = ({ isHidden }) => {
     },
   ];
 
+  const addToCartHandler = (title) => {
+    const itemObj = { itemName: title};
+    dispatch(addToCart(itemObj));
+} // send the currently clicked button to add to the arr. 
+
   return (
     <div
       className={`absolute bottom-12 bg-grayish border-2 border-t-gray border-l-gray ${
@@ -41,7 +53,7 @@ export const NavigationModal = ({ isHidden }) => {
     >
       <div className="pl-10 relative">
         {icons.map((icon,index) => (
-          <button
+          <button onClick={() => addToCartHandler(icon.title)}
             className="w-full hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-3xl flex py-2"
             key={index}
           >
@@ -59,3 +71,7 @@ export const NavigationModal = ({ isHidden }) => {
   //If isHidden is true, the hidden class is added, which will hide the modal. 
   //If isHidden is false, the hidden class is not added, and the modal will be visible.
   
+
+
+  //notes about how we will intergrate the other modals into this section. 
+  // idea - when we click the button we will insert that button into the store(redux);

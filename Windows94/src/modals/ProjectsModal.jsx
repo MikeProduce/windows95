@@ -6,9 +6,9 @@ import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
 
 export const ProjectsModal = ({onClose}) => {
     const dispatch = useDispatch();
-    const [modalVisibility, setmodalVisibility] = useState(''); // Add state variable
+    const [modalVisibility, setmodalVisibility] = useState('hidden'); // Add state variable
     const {cart} = useSelector((state) => state.cart)
-    console.log(cart);
+
 
 
 
