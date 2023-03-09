@@ -49,18 +49,18 @@ export const WindowsModal = ({onClose}) => {
                     <button onClick={onCloseModal} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-lg font-bold ">X</button>
                 </div>
             </div>
-            <div className="bg-grayish flex flex-col flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
-                <ul className="flex text-black font-display">
-                    <li className="mx-1"><span className="underline">F</span>ile</li>
-                    <li className="mx-1"><span className="underline">E</span>dit</li>
-                    <li className="mx-1"><span className="underline">V</span>iew</li>
-                    <li className="mx-1"><span className="underline">O</span>ptions</li>
-                    <li className="mx-1"><span className="underline">H</span>elp</li>
-                </ul>
+            <div className="bg-grayish flex flex-col flex-1 overflow-hidden text-ellipsis">
+            <ul className="flex text-black font-display">
+                <li className="mx-1 text-sm"><span className="underline">F</span>ile</li>
+                <li className="mx-1 text-sm"><span className="underline">E</span>dit</li>
+                <li className="mx-1 text-sm"><span className="underline">V</span>iew</li>
+                <li className="mx-1 text-sm"><span className="underline">O</span>ptions</li>
+                 <li className="mx-1 text-sm"><span className="underline">H</span>elp</li>
+             </ul>
                 <div className="mx-1 border-2 border-t-darkGray border-b-gray border-r-gray border-l-darkGray">
                 </div>
-                <div className="h-full flex-1 my-1">
-                    <div className="h-full bg-white text-center mx-1 py-2 border-2 border-t-black border-l-black border-r-gray border-b-gray break-words whitespace-normal overflow-y">
+                <div className="h-full flex-1 my-1 overflow-y-auto">
+                    <div className="h-full bg-white text-center mx-1 py-2 border-2 border-t-black border-l-black border-r-gray border-b-gray break-words whitespace-normal overflow-y-auto">
                         <h1 className="text-black font-display p-1">Hi im Miguel </h1>
                         <p className="text-black font-display p-1 break-words">DEVELOPER AND DESIGNER</p>
                         <p className="text-black font-display p-1 break-words">I'm fascinated by creative technology, and love to create visually immersive user experiences with code</p>
