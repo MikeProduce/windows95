@@ -48,7 +48,7 @@ export const StartMenu = () => {
         <span className="my-auto px-1 font-display text-2xl font-bold">Start</span>
      </button>
       {cart.map((currentWindow, index) => (
-        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtonStyles[index]} m-1 px-1 font-display text-center text-2xl overflow-hidden text-ellipsis whitespace-nowrap`} key={index}>
+        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtonStyles[index]}  m-1 px-1 font-display text-center text-2xl overflow-hidden text-ellipsis whitespace-nowrap`} key={index}>
       {currentWindow.itemName}
         </button>
       ))}
