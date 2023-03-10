@@ -1,9 +1,9 @@
-import github from '../icons/github.png';
-import folder from '../icons/folder.png';
-import Aboutme from '../icons/Aboutme.png';
-import Resume from '../icons/Resume.png';
-import technologies from '../icons/technologies.png';
-import shutdown from '../icons/shutdown.png';
+import github from '../images/Microsoft94Icons/github.png'
+import folder from '../images/Microsoft94Icons/folder.png';
+import Aboutme from '../images/Microsoft94Icons/Aboutme.png';
+import Resume from '../images/Microsoft94Icons/Resume.png';
+import technologies from '../images/Microsoft94Icons/technologies.png';
+import shutdown from '../images/Microsoft94Icons/shutdown.png';
 import { useDispatch, useSelector} from 'react-redux';
 import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
 

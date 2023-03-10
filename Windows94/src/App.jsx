@@ -1,4 +1,4 @@
-import { StartMenu } from './Navbar.jsx/StartMenu'
+import { StartMenu } from './Navbar/StartMenu'
 import { WindowsModal } from "./modals/windowsModal"
 import { ProjectsModal } from "./modals/ProjectsModal"
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import windows95 from '../icons/windows95.png';
+import windows95 from '../images/Microsoft94Icons/windows95.png';
 import { NavigationModal } from '../modals/NavigationModal';
 import { useDispatch, useSelector} from 'react-redux';
 import { removeToCart,toggleHidden } from '../Redux/cartSlice';
