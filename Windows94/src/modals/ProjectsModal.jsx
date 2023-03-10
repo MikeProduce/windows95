@@ -42,7 +42,7 @@ export const ProjectsModal = ({onClose}) => {
 
 
       return (
-        <div className={`h-2/5 w-2/5 bg-white border-2 border-l-gray border-t-gray absolute top-92 right-0 border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
+        <div className={`h-96 w-96 bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
             <div className="p-.05 flex justify-between bg-navyblue text-white font-display">
                 <span className="ml-1 overflow-hidden text-ellipsis whitespace-nowrap">Welcome to my page</span>
                 <div className="py-1 h-5 flex items-center whitespace-nowrap">

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='bg-teal h-screen'>
       <ProjectsModal/>
-      <WindowsModal/>
+        <WindowsModal/>
       <StartMenu/>
     </div>
   )
