@@ -38,14 +38,13 @@ export const WindowsModal = () => {
       };
 
     return (
-        <div className={`h-62 w-62 top-0 sm:h-96 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
+      <div className={`h-62 w-62 top-0 sm:h-96 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
         <ModalLayout TitleDescription="Welcome to my page" addToCartHandler={addToCartHandler} onCloseModal={onCloseModal}>
-        <h1 className="text-black font-display p-1">Hi im Miguel </h1>
-                 <p className="text-black font-display p-1 break-words">DEVELOPER AND DESIGNER</p>
-                 <p className="text-black font-display p-1 break-words">I'm fascinated by creative technology, and love to create visually immersive user experiences with code</p>
-                 <p className="text-black font-display p-1 break-words">I especially love web + mobile development, UI/UX and everything that comes with it!</p>
-                
-     </ModalLayout>
+          <h1 className="text-black font-display p-1">Hi im Miguel </h1>
+            <p className="text-black font-display p-1 break-words">DEVELOPER AND DESIGNER</p>
+            <p className="text-black font-display p-1 break-words">I'm fascinated by creative technology, and love to create visually immersive user experiences with code</p>
+            <p className="text-black font-display p-1 break-words">I especially love web + mobile development, UI/UX and everything that comes with it!</p>      
+        </ModalLayout>
      </div>
     )
 }

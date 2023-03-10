@@ -26,6 +26,15 @@
         "techStack": "HTML,CSS,JavaScript",
         "github": "https://github.com/MikeProduce/Pokedex-project",
         "liveSite": "https://mikeproduce.github.io/Pokedex-project/"
+      },
+      {
+        "id": 4,
+        "title": "Ecommerce static site",
+        "description": "A frontendmentor challange that required me to make a static ecommerce site",
+        "image": "src/images/ecomerce.png",
+        "techStack": "HTML,CSS,JavaScript",
+        "github": "https://github.com/MikeProduce/ecommerce-product-page-main#built-with",
+        "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
       }
     ]
   }
