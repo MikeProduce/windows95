@@ -22,7 +22,7 @@
         "id": 3,
         "title": "Pokedex",
         "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
-        "image": "src/images/pokedex.png",
+        "image": "/src/images/pokedex.png",
         "techStack": "HTML,CSS,JavaScript",
         "github": "https://github.com/MikeProduce/Pokedex-project",
         "liveSite": "https://mikeproduce.github.io/Pokedex-project/"
