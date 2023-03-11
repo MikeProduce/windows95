@@ -3,6 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
 import  projectData from '../JSON/projects.json'
+import pic from '../images/pokedex.png'
 
 
 
