@@ -19,7 +19,7 @@ import VisualStudio from '../images/icons/visual-studio-code-icon.svg'
 
 
 export const TechStack = () => {
-    const icons = [Boostrap,Css,Expresss,git,github,html,Javascript,MySQL,Reacts,Redux,Tailwind,VisualStudio]
+    const logos = [html,Css,Javascript,Reacts,Redux,Tailwind,Boostrap,Expresss,MySQL,VisualStudio,git,github]
     const dispatch = useDispatch();
     const [modalVisibility, setmodalVisibility] = useState('hidden'); // Add state variable
     const {cart} = useSelector((state) => state.cart)
@@ -34,7 +34,6 @@ export const TechStack = () => {
         const isModalInCart = cart.some((item) => item.itemName === 'TechStack');
         if (isModalInCart) {
             const index = cart.findIndex(item => item.itemName === 'TechStack');
-            // console.log(index);
             setmodalVisibility(cart[index].isHidden ? '' : 'hidden');
         } else return;
         
@@ -49,7 +48,7 @@ export const TechStack = () => {
       };
 
       return (
-        <div className={`mx-2 h-3/4 w-62 top-24 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
+        <div className={`mx-2 h-3/4 w-62 top-12 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
             <ModalLayout 
                 TitleDescription="TechStack" 
                 addToCartHandler={addToCartHandler} 
@@ -59,9 +58,11 @@ export const TechStack = () => {
                     <h1 className='text-5xl text-center font-display'>TechStack</h1>
                     <p className='text-center mb-4 font-display'>Technologies ive used</p>
                     <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 flex justify-center font-display'>
-                        {icons.map((icon) => {
-                            <img src={icon} alt={icon} />
-                        })}
+                        {logos.map((logo, index) => (
+                            <div key={index} className=" p-2 flex justify-center mt-10">
+                                <img src={logo} alt="logo" className="h-20" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </ModalLayout>
