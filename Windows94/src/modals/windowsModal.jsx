@@ -38,7 +38,7 @@ export const WindowsModal = () => {
       };
 
     return (
-      <div className={`h-62 w-62 top-0 sm:h-96 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
+      <div className={`m-1 h-62 w-62 top-0 sm:h-96 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
         <ModalLayout TitleDescription="Welcome to my page" addToCartHandler={addToCartHandler} onCloseModal={onCloseModal}>
           <h1 className="text-black font-display p-1">Hi im Miguel </h1>
             <p className="text-black font-display p-1 break-words">DEVELOPER AND DESIGNER</p>

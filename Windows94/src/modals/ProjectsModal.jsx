@@ -41,7 +41,7 @@ export const ProjectsModal = ({onClose}) => {
       };
 
       return (
-        <div className={` h-3/4 w-62 top-24 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
+        <div className={`mx-2 h-3/4 w-62 top-24 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
             <ModalLayout 
                 TitleDescription="Projects" 
                 addToCartHandler={addToCartHandler} 

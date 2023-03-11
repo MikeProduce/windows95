@@ -15,6 +15,7 @@ export const NavigationModal = ({ isHidden }) => {
     {
       icon: github,
       label: 'Github',
+      title:'Github'
     },
     {
       icon: folder,
@@ -24,6 +25,7 @@ export const NavigationModal = ({ isHidden }) => {
     {
       icon: Resume,
       label: 'Resume',
+      title: 'Resume'
     },
     {
       icon: Aboutme,
@@ -33,10 +35,12 @@ export const NavigationModal = ({ isHidden }) => {
     {
       icon: technologies,
       label: 'Technologies',
+      title: 'TechStack'
     },
     {
       icon: shutdown,
       label: 'Shut down...',
+      title: 'Shut down...',
     },
   ];
 
