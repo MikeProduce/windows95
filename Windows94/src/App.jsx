@@ -2,7 +2,7 @@ import { StartMenu } from './Navbar/StartMenu'
 import { WindowsModal } from "./modals/windowsModal"
 import { ProjectsModal } from "./modals/ProjectsModal"
 import { TechStack } from './modals/TechStack'
-
+import {InternetModal } from './modals/Internet'
 
 function App() {
  
@@ -10,9 +10,10 @@ function App() {
   return (
     <div className='bg-teal h-screen '>
       <ProjectsModal/>
-        <WindowsModal/>
-        <TechStack/>
+      <WindowsModal/>
+      <TechStack/>
       <StartMenu/>
+      < InternetModal />
     </div>
   )
 }

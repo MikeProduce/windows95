@@ -13,29 +13,29 @@ export const NavigationModal = ({ isHidden }) => {
   
   const icons = [
     {
-      icon: github,
-      label: 'Github',
-      title:'Github'
+      icon: folder,
+      label: 'Contact Me!',
+      title:'Contact Me!',
     },
     {
       icon: folder,
       label: 'Projects',
-      title: 'Projects'
+      title: 'Projects',   
     },
     {
       icon: Resume,
       label: 'Resume',
-      title: 'Resume'
+      title: 'Resume',  
     },
     {
       icon: Aboutme,
       label: 'About me',
-      title: 'Welcome to my page'
+      title: 'Welcome to my page'    
     },
     {
       icon: technologies,
       label: 'Technologies',
-      title: 'TechStack'
+      title: 'TechStack',    
     },
     {
       icon: shutdown,
@@ -50,26 +50,24 @@ export const NavigationModal = ({ isHidden }) => {
 } // send the currently clicked button to add to the arr. 
 
   return (
-    <div
-      className={`absolute bottom-12 bg-grayish border-2 border-t-gray border-l-gray ${
-        isHidden ? '' : 'hidden'
-      }`}
-    >
+    <div className={`absolute bottom-12 bg-grayish border-2 border-t-gray border-l-gray ${isHidden ? '' : 'hidden'}`}>
       <div className="pl-10 relative">
-        {icons.map((icon,index) => (
-          <button onClick={() => addToCartHandler(icon.title)}
+        {icons.map((icon, index) => (
+          <a
+            href={icon.website}
+            onClick={() => addToCartHandler(icon.title)}
             className="w-full hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-3xl flex py-2"
             key={index}
           >
-            <img className="h-8 my-auto px-2" src={icon.icon} alt={icon.label} />
+          <img className="h-8 my-auto px-2" src={icon.icon} alt={icon.label} />
             {icon.label}
-          </button>
+          </a>
         ))}
         <li className="absolute inset-y-0 left-0 w-10 bg-darkGray" />
       </div>
     </div>
-  );
-};
+        );
+  };
 
   //The isHidden prop is used to conditionally add the hidden class to the div element using a ternary operator. 
   //If isHidden is true, the hidden class is added, which will hide the modal. 
