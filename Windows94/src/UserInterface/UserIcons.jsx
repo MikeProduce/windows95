@@ -12,6 +12,21 @@ export const UserIcons = () => {
     const [modalVisibility, setmodalVisibility] = useState(''); // Add state variable
     const {cart} = useSelector((state) => state.cart)
 
+    const Icons = [
+      {
+        icon: Computer,
+        label: 'My Computer',
+      },
+      {
+        icon: Trash,
+        label: 'Trash', 
+      },
+      {
+        icon: Folder,
+        label: 'New Folder', 
+      },
+    ];
+
 
 
     const addToCartHandler = () => {
@@ -41,12 +56,16 @@ export const UserIcons = () => {
 
     return (
       <div className='absolute top-5 left-5'>
-        <img className='mx-auto h-15' src={Computer} alt={Computer} />
-        <p className='text-black font-display text-xl'>My Computer</p>
-        <img className='mx-auto h-15 mt-5' src={Trash} alt={Trash} />
-        <p className='text-black font-display text-xl text-center'>Bin</p>
-        <img className='mx-auto h-15 mt-5' src={Folder} alt={Folder} />
-        <p className='text-black font-display text-xl text-center'>New Folder</p>
-     </div>
+      {
+        Icons.map((ui) => { return(
+          <div>
+            <img className='mx-auto h-15' src={ui.icon} alt={ui.icon} />
+            <p className='text-black font-display text-xl text-center'>{ui.label}</p>
+          </div>
+        )
+          
+        })
+      }
+      </div>
     )
 }
