@@ -1,12 +1,13 @@
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
-import { ModalLayout } from './ModalLayout.jsx';
-import Portfolio from '../images/Microsoft94Icons/thisisme.png'
+import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx'
+import Computer from '../images/Microsoft94Icons/Computer.png'
+import Trash from '../images/Microsoft94Icons/trash.png'
+import Folder from '../images/Microsoft94Icons/folder.png'
 
 
 
-export const WindowsModal = () => {
+export const UserIcons = () => {
     const dispatch = useDispatch();
     const [modalVisibility, setmodalVisibility] = useState(''); // Add state variable
     const {cart} = useSelector((state) => state.cart)
@@ -39,15 +40,13 @@ export const WindowsModal = () => {
       };
 
     return (
-      <div className={`m-1 h-3/4 w-3/4 top-0 sm:h-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
-        <ModalLayout TitleDescription="Welcome to my page" addToCartHandler={addToCartHandler} onCloseModal={onCloseModal}>
-          <h1 className="text-black font-display p-1 text-2xl">Hi im Miguel </h1>
-            <img className='mx-auto' src={Portfolio} alt={Portfolio} />
-            <p className="text-black font-display p-1 break-words text-2xl">DEVELOPER AND DESIGNER</p>
-            <p className="text-black font-display p-1 break-words text-2xl">I'm fascinated by creative technology, and love to create visually immersive user experiences with code</p>
-            <p className="text-black font-display p-1 break-words text-2xl">I especially love web + mobile development, UI/UX and everything that comes with it!</p>      
-        </ModalLayout>
+      <div className='absolute top-5 left-5'>
+        <img className='mx-auto h-15' src={Computer} alt={Computer} />
+        <p className='text-black font-display text-xl'>My Computer</p>
+        <img className='mx-auto h-15 mt-5' src={Trash} alt={Trash} />
+        <p className='text-black font-display text-xl text-center'>Bin</p>
+        <img className='mx-auto h-15 mt-5' src={Folder} alt={Folder} />
+        <p className='text-black font-display text-xl text-center'>New Folder</p>
      </div>
     )
 }
-

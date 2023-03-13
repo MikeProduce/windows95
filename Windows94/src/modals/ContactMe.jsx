@@ -5,7 +5,7 @@ import { ModalLayout } from './ModalLayout.jsx';
 
 
 
-export const InternetModal = () => {
+export const ContactMe = () => {
     const dispatch = useDispatch();
     const [modalVisibility, setmodalVisibility] = useState('hidden'); // Add state variable
     const {cart} = useSelector((state) => state.cart)

@@ -1,8 +1,8 @@
 import github from '../images/Microsoft94Icons/github.png'
 import folder from '../images/Microsoft94Icons/folder.png';
-import Aboutme from '../images/Microsoft94Icons/Aboutme.png';
+import AboutMe from '../images/Microsoft94Icons/AboutMe.png'
 import Resume from '../images/Microsoft94Icons/Resume.png';
-import technologies from '../images/Microsoft94Icons/technologies.png';
+import Project from '../images/Microsoft94Icons/project.png';
 import shutdown from '../images/Microsoft94Icons/shutdown.png';
 import { useDispatch, useSelector} from 'react-redux';
 import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
@@ -13,12 +13,12 @@ export const NavigationModal = ({ isHidden }) => {
   
   const icons = [
     {
-      icon: folder,
+      icon: AboutMe,
       label: 'Contact Me!',
       title:'Contact Me!',
     },
     {
-      icon: folder,
+      icon: Project,
       label: 'Projects',
       title: 'Projects',   
     },
@@ -28,12 +28,12 @@ export const NavigationModal = ({ isHidden }) => {
       title: 'Resume',  
     },
     {
-      icon: Aboutme,
+      icon: AboutMe,
       label: 'About me',
       title: 'Welcome to my page'    
     },
     {
-      icon: technologies,
+      icon: folder,
       label: 'Technologies',
       title: 'TechStack',    
     },

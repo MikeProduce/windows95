@@ -3,12 +3,14 @@ import windows95 from '../images/Microsoft94Icons/windows95.png';
 import { NavigationModal } from '../modals/NavigationModal';
 import { useDispatch, useSelector} from 'react-redux';
 import { removeToCart,toggleHidden } from '../Redux/cartSlice';
+import {Clock} from './Clock.jsx'
 
 
 export const StartMenu = () => {
   const dispatch = useDispatch();
   const [isStartMenuClicked, setisStartMenuClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
+  const [currentTime, setCurrentTime] = useState(new Date());
   // console.log(cart);
 
   const toggleCartItemVisibility = (item) => {
@@ -37,24 +39,25 @@ export const StartMenu = () => {
 
   return (
     <div className="bg-grayish border-t-2 border-gray pb-0.5 flex fixed bottom-0 w-full">
-      <NavigationModal isHidden={isStartMenuClicked} />
-        <button
-          className={`flex border-2 m-1 px-1 overflow-hidden ${
-            isStartMenuClicked ? 'border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray'
-          }`}
-        onClick={handleClick}
-        >
-        <img src={windows95} alt={windows95} />
-        <span className="my-auto px-1 font-display text-2xl font-bold">Start</span>
-     </button>
+      <NavigationModal 
+        isHidden={isStartMenuClicked} />
+        <div>
+          <button
+            className={`flex border-2 m-1 px-1 p-.05 w-28 ${
+              isStartMenuClicked ? 'border-t-black border-l-black border-b-gray border-r-gray' : 'border-t-gray border-l-gray'
+            }`}
+            onClick={handleClick}
+            >
+            <img src={windows95} alt={windows95} />
+            <span className="my-auto px-1 font-display text-2xl font-bold ml-1">Start</span>
+          </button>
+      </div>
       {cart.map((currentWindow, index) => (
-        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtonStyles[index]}  m-1 px-1 font-display text-center text-2xl overflow-hidden text-ellipsis whitespace-nowrap`} key={index}>
+        <button onClick={() => toggleCartItemVisibility(currentWindow)} className={`${cartButtonStyles[index]}  m-1 px-1 font-display text-center text-2xl text-ellipsis whitespace-nowrap truncate`} key={index}>
       {currentWindow.itemName}
         </button>
       ))}
-      <div className="my-auto ml-auto border-2 m-1 p-.05 px-1 border-t-black border-l-black border-b-gray border-r-gray font-display text-2xl">
-        10:38AM
-      </div>
+      <Clock/>
     </div>
   );
 };
