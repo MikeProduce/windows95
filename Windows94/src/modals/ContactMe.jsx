@@ -33,7 +33,7 @@ export const ContactMe = () => {
         setmodalVisibility('hidden');
         const isModalInCart = cart.some((item) => item.itemName === 'Contact Me!');
         if (isModalInCart) {
-          dispatch(removeToCart('Internet'));
+          dispatch(removeToCart('Contact Me!'));
         }
       };
 

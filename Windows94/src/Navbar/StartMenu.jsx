@@ -10,7 +10,6 @@ export const StartMenu = () => {
   const dispatch = useDispatch();
   const [isStartMenuClicked, setisStartMenuClicked] = useState(false);
   const {cart} = useSelector((state) => state.cart)
-  const [currentTime, setCurrentTime] = useState(new Date());
   // console.log(cart);
 
   const toggleCartItemVisibility = (item) => {
