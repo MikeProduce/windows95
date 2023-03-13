@@ -45,10 +45,10 @@ export const ProjectsModal = ({onClose}) => {
                 addToCartHandler={addToCartHandler} 
                 onCloseModal={onCloseModal}
                 >
-                <div className='h-full flex flex-col  overflow-y-auto'>
+                <div className='h-full flex flex-col  overflow-y-auto bg-gray'>
                     <h1 className='text-5xl text-center font-display'>Projects</h1>
                     <p className='text-center mb-4 font-display'>Things I've Built</p>
-                    <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 flex justify-center font-display'>
+                    <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 flex justify-center font-display mx-5'>
                         {projectsArr.map((project, index) => (
                             <div className='m-5 bg-Very-Light-Gray mt-10 rounded-xl transition hover:scale-110 cursor-pointer hover:drop-shadow-xl' key={index}>
                                 <img className='rounded-t-xl w-full object-cover' src={project.image} alt={project.image} />

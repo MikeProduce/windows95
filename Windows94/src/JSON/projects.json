@@ -5,7 +5,7 @@
         "title": "Pokedex",
         "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
         "image": "/pokedex.png",
-        "techStack": "HTML,CSS,JavaScript",
+        "techStack": "I used HTML5, CSS, and Javascript for this project",
         "github": "https://github.com/MikeProduce/Pokedex-project",
         "liveSite": "https://mikeproduce.github.io/Pokedex-project/"
       },
