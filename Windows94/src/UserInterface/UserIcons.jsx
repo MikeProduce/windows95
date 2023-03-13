@@ -59,11 +59,10 @@ export const UserIcons = () => {
       {
         Icons.map((ui) => { return(
           <div>
-            <img className='mx-auto h-15' src={ui.icon} alt={ui.icon} />
-            <p className='text-black font-display text-xl text-center'>{ui.label}</p>
+            <img className='mx-auto h-15 mt-2' src={ui.icon} alt={ui.icon} />
+            <p className='text-black font-display text-xl text-center'>{ui.label}</p>  
           </div>
         )
-          
         })
       }
       </div>
