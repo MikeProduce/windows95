@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
+import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
 import  projectData from '../JSON/projects.json'
 
@@ -9,32 +9,32 @@ import  projectData from '../JSON/projects.json'
 export const ProjectsModal = ({onClose}) => {
     const dispatch = useDispatch();
     const [modalVisibility, setmodalVisibility] = useState('hidden'); // Add state variable
-    const {cart} = useSelector((state) => state.cart)
+    const {window} = useSelector((state) => state.window)
     const [projects, setProjects] = useState(projectData);
     const projectsArr = projects.projects;
     console.log(projects)
-    const addToCartHandler = ( ) => {
+    const addWindowHandler = ( ) => {
         const itemObj = { itemName: 'Projects' };
-        dispatch(addToCart(itemObj));
+        dispatch(addWindow(itemObj));
         setmodalVisibility('hidden');
     }
-    // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the cart arr 
+    // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the window arr 
     // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
     useEffect(() => {
-        const isModalInCart = cart.some((item) => item.itemName === 'Projects');
-        if (isModalInCart) {
-            const index = cart.findIndex(item => item.itemName === 'Projects');
+        const isModalInwindow = window.some((item) => item.itemName === 'Projects');
+        if (isModalInwindow) {
+            const index = window.findIndex(item => item.itemName === 'Projects');
             // console.log(index);
-            setmodalVisibility(cart[index].isHidden ? '' : 'hidden');
+            setmodalVisibility(window[index].isHidden ? '' : 'hidden');
         } else return;
         
-    }, [cart]);
+    }, [window]);
 
     const onCloseModal = () => {
         setmodalVisibility('hidden');
-        const isModalInCart = cart.some((item) => item.itemName === 'Projects');
-        if (isModalInCart) {
-          dispatch(removeToCart('Projects'));
+        const isModalInwindow = window.some((item) => item.itemName === 'Projects');
+        if (isModalInwindow) {
+          dispatch(removeWindow('Projects'));
         }
       };
 
@@ -42,7 +42,7 @@ export const ProjectsModal = ({onClose}) => {
         <div className={`mx-2 h-3/4 w-62 top-24 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
             <ModalLayout 
                 TitleDescription="Projects" 
-                addToCartHandler={addToCartHandler} 
+                addWindowHandler={addWindowHandler} 
                 onCloseModal={onCloseModal}
                 >
                 <div className='h-full flex flex-col  overflow-y-auto bg-gray'>

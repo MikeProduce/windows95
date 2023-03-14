@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const ModalLayout = ({ onCloseModal, addToCartHandler, TitleDescription, children}) => {
+export const ModalLayout = ({ onCloseModal, addWindowHandler, TitleDescription, children}) => {
 
     return (
         <>
             <div className="p-.05 flex justify-between bg-navyblue text-white font-display">
                 <span className="ml-1 overflow-hidden text-ellipsis">{TitleDescription}</span>
                 <div className="py-1 h-5 flex items-center whitespace-nowrap">
-                    <button onClick={addToCartHandler} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-xl font-bold">_</button>
+                    <button onClick={addWindowHandler} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-xl font-bold">_</button>
                     <button onClick={onCloseModal} className="bg-grayish p-1 mx-1 h-4 text-black border-2 border-t-gray border-l-gray border-r-darkGray border-b-darkGray flex items-center justify-center text-lg font-bold ">X</button>
                 </div>
             </div>

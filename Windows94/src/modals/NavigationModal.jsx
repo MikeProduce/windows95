@@ -5,7 +5,7 @@ import Resume from '../images/Microsoft94Icons/Resume.png';
 import Project from '../images/Microsoft94Icons/project.png';
 import shutdown from '../images/Microsoft94Icons/shutdown.png';
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCart, removeToCart, toggleHidden } from '../Redux/cartSlice.jsx';
+import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
 
 
 export const NavigationModal = ({ isHidden }) => {
@@ -44,9 +44,9 @@ export const NavigationModal = ({ isHidden }) => {
     },
   ];
 
-  const addToCartHandler = (title) => {
+  const addWindowHandler = (title) => {
     const itemObj = { itemName: title};
-    dispatch(addToCart(itemObj));
+    dispatch(addWindow(itemObj));
 } // send the currently clicked button to add to the arr. 
 
   return (
@@ -55,7 +55,7 @@ export const NavigationModal = ({ isHidden }) => {
         {icons.map((icon, index) => (
           <a
             href={icon.website}
-            onClick={() => addToCartHandler(icon.title)}
+            onClick={() => addWindowHandler(icon.title)}
             className="w-full hover:bg-navyblue hover:text-white pl-1 pr-5 cursor-pointer font-display text-3xl flex py-2"
             key={index}
           >
