@@ -12,7 +12,7 @@ export const ProjectsModal = ({onClose}) => {
     const {cart} = useSelector((state) => state.cart)
     const [projects, setProjects] = useState(projectData);
     const projectsArr = projects.projects;
-    console.log(projectsArr)
+    console.log(projects)
     const addToCartHandler = ( ) => {
         const itemObj = { itemName: 'Projects' };
         dispatch(addToCart(itemObj));
