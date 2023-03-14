@@ -4,18 +4,24 @@ import { ProjectsModal } from "./modals/ProjectsModal"
 import { TechStack } from './modals/TechStack'
 import {ContactMe } from './modals/ContactMe'
 import { UserIcons } from './UserInterface/UserIcons'
+import { MyComputer } from './modals/MyComputer'
+import { NewFolder } from './modals/NewFolder'
+import { Trash } from './modals/Trash'
+
 
 function App() {
- 
 
   return (
     <div className='bg-teal h-screen '>
-       <UserIcons/>
+      <UserIcons/>
       <ProjectsModal/>
       <WindowsModal/>
       <TechStack/>
       <StartMenu/>
-      < ContactMe />
+      <ContactMe/>
+      <MyComputer/>
+      <NewFolder/>
+      <Trash/>
     </div>
   )
 }

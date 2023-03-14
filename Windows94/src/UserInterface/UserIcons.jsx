@@ -29,13 +29,13 @@ export const UserIcons = () => {
 
 
 
-    const addToCartHandler = () => {
-        const itemObj = { itemName: 'Welcome to my page' };
+    const addToCartHandler = (name) => {
+      console.log(name);// we take the current item name and send it to our statemanagement tool to store and makes a navbar 
+        const itemObj = { itemName: name };
         dispatch(addToCart(itemObj));
         setmodalVisibility('hidden');
     }
-    // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the cart arr 
-    // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
+    
     useEffect(() => {
         const isModalInCart = cart.some((item) => item.itemName === 'Welcome to my page');
         if (isModalInCart) {
@@ -57,9 +57,9 @@ export const UserIcons = () => {
     return (
       <div className='absolute top-5 left-5'>
       {
-        Icons.map((ui) => { return(
-          <div>
-            <img className='mx-auto h-15 mt-2' src={ui.icon} alt={ui.icon} />
+        Icons.map((ui, index) => { return(
+          <div key={index} onClick={() => addToCartHandler(ui.label)}>
+            <img className='mx-auto h-15 mt-4' src={ui.icon} alt={ui.icon} />
             <p className='text-black font-display text-xl text-center'>{ui.label}</p>  
           </div>
         )

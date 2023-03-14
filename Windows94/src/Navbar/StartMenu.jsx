@@ -20,6 +20,12 @@ export const StartMenu = () => {
     setisStartMenuClicked(!isStartMenuClicked);
   };
 
+  const handleModalClick = () => {
+    if (isStartMenuClicked) {
+      setisStartMenuClicked(false);
+    }
+  }
+
 
   const cartButtonStyles = cart.map((currentWindow) => { // we map over the cart and every variable inside contains all itemName along with the isHidden variable that determines 
     //whether the modal is open or not.
@@ -37,7 +43,8 @@ export const StartMenu = () => {
   //boolean value it contains
 
   return (
-    <div className="bg-grayish border-t-2 border-gray pb-0.5 flex fixed bottom-0 w-full">
+    <div className="bg-grayish border-t-2 border-gray pb-0.5 flex fixed bottom-0 w-full"
+    onClick={handleModalClick}>
       <NavigationModal 
         isHidden={isStartMenuClicked} />
         <div>
