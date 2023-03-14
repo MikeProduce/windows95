@@ -84,7 +84,7 @@ export const MyComputer = () => {
                 >
                 <div className="grid grid-cols-3 gap-5">
                     {icons.map((icon, index) => (
-                        <div onClick={() => addToCartHandlerFromMyComputer(icon.title)} key={index} className="flex flex-col items-center">
+                        <div onClick={() => addToCartHandlerFromMyComputer(icon.title)} key={index} className="flex flex-col items-center font-display">
                         <img src={icon.icon} alt={icon.icon} />
                         {icon.label}
                         </div>
