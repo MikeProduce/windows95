@@ -63,7 +63,7 @@ export const NavigationModal = ({ isHidden }) => {
             {icon.label}
           </a>
         ))}
-        <li className="absolute inset-y-0 left-0 w-10 bg-darkGray" />
+        <div className="absolute inset-y-0 left-0 w-10 bg-darkGray" />
       </div>
     </div>
         );

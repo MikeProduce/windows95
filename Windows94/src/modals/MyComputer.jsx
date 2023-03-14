@@ -6,7 +6,6 @@ import folder from '../images/Microsoft94Icons/folder.png';
 import AboutMe from '../images/Microsoft94Icons/AboutMe.png'
 import Resume from '../images/Microsoft94Icons/Resume.png';
 import Project from '../images/Microsoft94Icons/project.png';
-import shutdown from '../images/Microsoft94Icons/shutdown.png';
 
 
 
