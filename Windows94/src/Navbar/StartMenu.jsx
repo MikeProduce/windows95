@@ -13,7 +13,7 @@ export const StartMenu = () => {
 
 
   const togglewindowItemVisibility = (item) => {
-    dispatch(toggleHidden(item));
+    dispatch(toggleHidden(item.itemName));
   }
 
   const handleClick = () => {
@@ -21,11 +21,11 @@ export const StartMenu = () => {
   };
 
   const handleModalClick = () => {
-      isStartMenuClicked ? setisStartMenuClicked(false) : setisStartMenuClicked(true)
+    isStartMenuClicked ? setisStartMenuClicked(false) : null;
   }
 
 
-  // Create an array of buttons to represent each window in the state
+// Create an array of buttons to represent each window in the state
 const windowButtons = window.map((currentWindow, index) => {
   // Determine the appropriate button style based on whether the window is hidden or not
   const windowButtonStyle = currentWindow.isHidden
@@ -34,7 +34,7 @@ const windowButtons = window.map((currentWindow, index) => {
   // Return the button element with the appropriate style, and the window name as its label
   return (
     <button
-      onClick={() => togglewindowItemVisibility(currentWindow.itemName)}
+      onClick={() => togglewindowItemVisibility(currentWindow)}
       className={`${windowButtonStyle}  m-1 px-1 font-display text-center text-2xl text-ellipsis whitespace-nowrap truncate`}
       key={index}
     >
@@ -58,11 +58,10 @@ return (
         <span className="my-auto px-1 font-display text-2xl font-bold ml-1">Start</span>
       </button>
     </div>
-    {windowButtons} 
+    {windowButtons}
     <Clock /> 
   </div>
 );
 
-  
 };
 
