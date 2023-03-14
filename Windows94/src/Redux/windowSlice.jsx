@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  window: [{itemName: 'Welcome to my page',isHidden: true}], // initializing the window array with an empty array
+  window: [{itemName: 'Welcome to my page', isHidden: true}], // This item in the array starts here because we want this window to be open on load.
 };
 
 const windowSlice = createSlice({
@@ -9,38 +9,38 @@ const windowSlice = createSlice({
   initialState,
   reducers: {
     addWindow: (state, action) => {
-      const { itemName } = action.payload; // brings in the modal name
-      const item = state.window.find((item) => item.itemName === itemName);// checks if the itemName is alreaedy in the array
+      const { itemName } = action.payload; // Retrieve the window name from the action payload
+      const item = state.window.find((item) => item.itemName === itemName); // Check if the window already exists in the array
       if (item) {
-        item.isHidden = !item.isHidden; // if the item name is already in the array but the current boolean value attached to the isHidden property then make it false
+        item.isHidden = !item.isHidden; // If the window already exists in the array, toggle the value of isHidden to show or hide the window
       } else {
-        state.window = [...state.window, { itemName, isHidden: true }];// else push this current itemName into the array and attach isHidden with a booleon. 
+        state.window = [...state.window, { itemName, isHidden: true }]; // If the window does not exist in the array, add it with isHidden set to true to show the window
       }
-       // add a new item to the window array with the itemName and isHidden property set to true which will show the modal
     },
     removeWindow: (state, action) => {
-      if (state.window.length === 0) { // checking if the window is empty
-        throw new Error('Cannot remove item from empty window'); // throw an error if the window is empty
+      if (state.window.length === 0) { // Throw an error if the window is empty
+        throw new Error('Cannot remove item from empty window');
       }
-      const  itemName  = action.payload; // destructure itemName from the action payload
+      const itemName = action.payload; // Retrieve the window name from the action payload
       console.log(itemName);
-      const index = state.window.findIndex(item => item.itemName === itemName); // find the index of the item to remove from the window array
-      if (index !== -1) { // checking if the item exists in the window array
-        state.window.splice(index, 1); // remove the item from the window array
+      const index = state.window.findIndex(item => item.itemName === itemName); // Find the index of the window to remove from the array
+      if (index !== -1) { // If the window exists in the array, remove it
+        state.window.splice(index, 1);
       }
     },
     toggleHidden: (state, action) => {
-      const  itemName = action.payload; 
+      const itemName = action.payload; 
       console.log(itemName);
-      const item = state.window.find((item) => item.itemName === itemName);
+      const item = state.window.find((item) => item.itemName === itemName); // Find the window object with the matching name
       if (item) {
-        item.isHidden = !item.isHidden;
+        item.isHidden = !item.isHidden; // Toggle the value of isHidden to show or hide the window
       }
     }
   },
 });
 
-export const { addWindow, removeWindow,toggleHidden} = windowSlice.actions; // exporting the action creators
-export default windowSlice.reducer; // exporting the reducer function
+export const { addWindow, removeWindow, toggleHidden } = windowSlice.actions; // Export the action creators
+export default windowSlice.reducer; // Export the reducer function
+
 
 
