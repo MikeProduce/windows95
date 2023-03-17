@@ -8,6 +8,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
 
 
+
 export const NavigationModal = ({ isHidden }) => {
   const dispatch = useDispatch();
   

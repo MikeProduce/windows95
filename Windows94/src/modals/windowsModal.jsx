@@ -1,41 +1,16 @@
-import {useEffect, useState} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
-import { addWindow, removeWindow} from '../Redux/windowSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
 import Portfolio from '../images/Microsoft94Icons/thisisme.png'
+import { useWindow } from '../customHook/customHook.jsx';
+
 
 
 
 export const WindowsModal = () => {
-    const dispatch = useDispatch();
-    const [modalVisibility, setModalVisibility] = useState(''); // Add state variable
-    const {window} = useSelector((state) => state.window)
-    const windowName = 'Welcome to my page'
+    const windowName = 'Welcome to my page' 
+    const { addWindowHandler, onCloseModal, modalVisibility } = useWindow(windowName);
+    
 
 
-
-    const addWindowHandler = () => {
-        const itemObj = { itemName: windowName };
-        dispatch(addWindow(itemObj));
-        setModalVisibility('hidden');
-    }
-    // when the page first loads we see the modal windowName, and whenever we click the minimize button we send this modal to the window arr 
-    // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
-    useEffect(() => {
-        const isModalInwindow = window.some((item) => item.itemName === windowName);
-        if (isModalInwindow) {
-            const index = window.findIndex(item => item.itemName === windowName);
-            setModalVisibility(window[index].isHidden ? '' : 'hidden');
-          } else return;
-    }, [window]);
-
-    const onCloseModal = () => {
-        setModalVisibility('hidden');
-        const isModalInwindow = window.some((item) => item.itemName === windowName);
-        if (isModalInwindow) {
-          dispatch(removeWindow(windowName));
-        }
-      };
 
     return (
       <div className={`m-1 h-3/4 w-3/4 top-0 sm:h-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>

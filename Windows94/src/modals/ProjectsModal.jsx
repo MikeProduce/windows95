@@ -1,47 +1,21 @@
-import {useEffect, useState} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
-import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
+import {useState} from 'react'
 import { ModalLayout } from './ModalLayout.jsx';
 import  projectData from '../JSON/projects.json'
+import { useWindow } from '../customHook/customHook.jsx';
 
 
 
-export const ProjectsModal = ({onClose}) => {
-    const dispatch = useDispatch();
-    const [modalVisibility, setmodalVisibility] = useState('hidden'); // Add state variable
-    const {window} = useSelector((state) => state.window)
+export const ProjectsModal = () => {
     const [projects, setProjects] = useState(projectData);
     const projectsArr = projects.projects;
-    console.log(projects)
-    const addWindowHandler = ( ) => {
-        const itemObj = { itemName: 'Projects' };
-        dispatch(addWindow(itemObj));
-        setmodalVisibility('hidden');
-    }
-    // when the page first loads we see the modal 'Welcome to my page', and whenever we click the minimize button we send this modal to the window arr 
-    // redux where it has the current name of this modal + a boolean value that will determine when the modal should pop up again.
-    useEffect(() => {
-        const isModalInwindow = window.some((item) => item.itemName === 'Projects');
-        if (isModalInwindow) {
-            const index = window.findIndex(item => item.itemName === 'Projects');
-            // console.log(index);
-            setmodalVisibility(window[index].isHidden ? '' : 'hidden');
-        } else return;
-        
-    }, [window]);
+    const windowName = 'Projects' 
+    const { addWindowHandler, onCloseModal, modalVisibility } = useWindow(windowName);
 
-    const onCloseModal = () => {
-        setmodalVisibility('hidden');
-        const isModalInwindow = window.some((item) => item.itemName === 'Projects');
-        if (isModalInwindow) {
-          dispatch(removeWindow('Projects'));
-        }
-      };
 
       return (
         <div className={`mx-2 h-3/4 w-62 top-24 sm:h-1/2 sm:w-3/4 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
             <ModalLayout 
-                TitleDescription="Projects" 
+                TitleDescription={windowName} 
                 addWindowHandler={addWindowHandler} 
                 onCloseModal={onCloseModal}
                 >
