@@ -1,8 +1,4 @@
-import {useEffect, useState} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
-import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
-import  projectData from '../JSON/projects.json'
 import { useWindow } from '../customHook/customHook.jsx';
 
 

@@ -26,15 +26,9 @@
   },
   {
     "id": 5,
-    "icon": "NavbarModal/technologies.png",
+    "icon": "NavbarModal/folder.png",
     "label": "Technologies",
     "title": "TechStack"    
-  },
-  {
-    "id": 6,
-    "icon": "NavbarModal/shutdown.png",
-    "label": "Shut down...",
-    "title": "Shut down..."
   }
 ]
 }

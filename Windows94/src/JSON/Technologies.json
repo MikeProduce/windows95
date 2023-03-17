@@ -1,0 +1,59 @@
+{
+  "Technologies":[
+    {
+      "id": 1,
+      "icon": "/icons/html-icon.svg",
+      "label": "HTML"
+    },
+    {
+      "id": 2,
+      "icon": "/icons/css-icon.svg",
+      "label": "CSS"
+    },
+    {
+      "id": 3,
+      "icon": "/icons/Javascript.svg",
+      "label": "JavaScript"
+    },
+    {
+      "id": 4,
+      "icon": "/icons/react-js-icon.svg",
+      "label": "React"  
+    },
+    {
+      "id": 5,
+      "icon": "/icons/redux-icon.svg",
+      "label": "Redux"  
+    },
+    {
+      "id": 6,
+      "icon": "/icons/tailwind-css-icon.svg",
+      "label": "Tailwind"
+    },
+    {
+      "id": 7,
+      "icon": "/icons/bootstrap-5-logo-icon.svg",
+      "label": "Boostrap" 
+    },
+    {
+      "id": 8,
+      "icon": "/icons/mysql-icon.svg",
+      "label": "MySQL"
+    },
+    {
+      "id": 9,
+      "icon": "/icons/visual-studio-code-icon.svg",
+      "label": "VSCode"
+    },
+    {
+      "id": 10,
+      "icon": "/icons/git-icon.svg",
+      "label": "GIT" 
+    },
+    {
+      "id": 11,
+      "icon": "/icons/github-icon.svg",
+      "label": "GitHub" 
+    }
+  ]
+}

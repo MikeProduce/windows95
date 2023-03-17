@@ -1,24 +1,16 @@
 import { ModalLayout } from './ModalLayout.jsx';
-import Boostrap from '../images/icons/bootstrap-5-logo-icon.svg'
-import Css from '../images/icons/css-icon.svg'
-import Expresss from '../images/icons/express-js-icon.svg'
-import git from '../images/icons/git-icon.svg'
-import github from '../images/icons/github-icon.svg'
-import html from '../images/icons/html-icon.svg'
-import Javascript from '../images/icons/Javascript.svg'
-import MySQL from '../images/icons/mysql-icon.svg'
-import Reacts from '../images/icons/react-js-icon.svg'
-import Redux from '../images/icons/redux-icon.svg'
-import Tailwind from '../images/icons/tailwind-css-icon.svg'
-import VisualStudio from '../images/icons/visual-studio-code-icon.svg'
 import { useWindow } from '../customHook/customHook.jsx';
+import technologies from '../JSON/Technologies.json'
+import { useState } from 'react';
 
 
 
 
 
 export const TechStack = () => {
-    const logos = [html,Css,Javascript,Reacts,Redux,Tailwind,Boostrap,Expresss,MySQL,VisualStudio,git,github]
+    const [tech, setTech] = useState(technologies);
+    const technology = tech.Technologies;
+    console.log(technology);
     const windowName = 'TechStack' 
     const { addWindowHandler, onCloseModal, modalVisibility } = useWindow(windowName);
 
@@ -33,9 +25,10 @@ export const TechStack = () => {
                     <h1 className='text-5xl text-center font-display'>TechStack</h1>
                     <p className='text-center mb-4 font-display'>Technologies ive used</p>
                     <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 flex justify-center font-display'>
-                        {logos.map((logo, index) => (
-                            <div key={index} className=" p-2 flex justify-center mt-10">
+                        {technology.map((logo, index) => (
+                            <div key={index} className=" p-2 justify-center mt-10">
                                 <img src={logo} alt="logo" className="h-20" />
+                                <p>{logo.label}</p>
                             </div>
                         ))}
                     </div>
