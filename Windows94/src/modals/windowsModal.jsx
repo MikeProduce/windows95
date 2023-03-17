@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
-import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
+import { addWindow, removeWindow} from '../Redux/windowSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
 import Portfolio from '../images/Microsoft94Icons/thisisme.png'
 
