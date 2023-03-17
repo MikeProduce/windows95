@@ -1,0 +1,40 @@
+{
+    "NavbarModals":[
+    {
+        "id": 1,
+    "icon": "NavbarModal/AboutMe.png",
+    "label": "Contact Me!",
+    "title":"Contact Me!"
+  },
+  {
+    "id": 2,
+    "icon": "NavbarModal/project.png",
+    "label": "Projects",
+    "title": "Projects"   
+  },
+  {
+    "id": 3,
+    "icon": "NavbarModal/Resume.png",
+    "label": "Resume",
+    "title": "Resume"
+  },
+  {
+    "id": 4,
+    "icon": "NavbarModal/AboutMe.png",
+    "label": "About me",
+    "title": "Welcome to my page"   
+  },
+  {
+    "id": 5,
+    "icon": "NavbarModal/technologies.png",
+    "label": "Technologies",
+    "title": "TechStack"    
+  },
+  {
+    "id": 6,
+    "icon": "NavbarModal/shutdown.png",
+    "label": "Shut down...",
+    "title": "Shut down..."
+  }
+]
+}

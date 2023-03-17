@@ -1,6 +1,3 @@
-import {useEffect, useState} from 'react'
-import { useDispatch, useSelector} from 'react-redux';
-import { addWindow, removeWindow, toggleHidden } from '../Redux/windowSlice.jsx';
 import { ModalLayout } from './ModalLayout.jsx';
 import Boostrap from '../images/icons/bootstrap-5-logo-icon.svg'
 import Css from '../images/icons/css-icon.svg'
