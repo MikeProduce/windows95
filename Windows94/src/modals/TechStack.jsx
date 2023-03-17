@@ -26,9 +26,9 @@ export const TechStack = () => {
                     <p className='text-center mb-4 font-display'>Technologies ive used</p>
                     <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 flex justify-center font-display'>
                         {technology.map((logo, index) => (
-                            <div key={index} className=" p-2 justify-center mt-10">
-                                <img src={logo} alt="logo" className="h-20" />
-                                <p>{logo.label}</p>
+                            <div key={index} className=" p-2 justify-center mt-10 mx-auto">
+                                <img src={logo.icon} alt="logo" className="h-20" />
+                                <p className='mx-auto'>{logo.label}</p>
                             </div>
                         ))}
                     </div>
