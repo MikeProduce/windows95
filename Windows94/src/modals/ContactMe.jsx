@@ -16,8 +16,12 @@ export const ContactMe = () => {
       <div className={`m-1 h-62 w-62 top-0 sm:h-96 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
         <ModalLayout TitleDescription={windowName} addWindowHandler={addWindowHandler} onCloseModal={onCloseModal}>
           <div className='flex'>
-            <img className='h-12 m-5 hover:scale-110 cursor-pointer hover:drop-shadow-xl' src={github} alt={github} />
-            <img className='h-12 m-5 hover:scale-110 cursor-pointer hover:drop-shadow-xl' src={linkld} alt={linkld} />
+            <a href="https://github.com/MikeProduce" target="_blank">
+              <img className='h-12 m-5 hover:scale-110 cursor-pointer hover:drop-shadow-xl' src={github} alt={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/miguel-gomez1994/" target="_blank">
+              <img className='h-12 m-5 hover:scale-110 cursor-pointer hover:drop-shadow-xl' src={linkld} alt={linkld} />
+            </a>
           </div>
         </ModalLayout>
      </div>

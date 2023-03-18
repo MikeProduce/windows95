@@ -29,8 +29,10 @@ export const ProjectsModal = () => {
                                 <h1 className='text-xl text-center p-4'>{project.title}</h1>
                                 <h1 className='text-md px-6 p-4'>{project.description}</h1>
                                 <p className='p-4'>Tech Stack: {project.techStack}</p>
-                                <a href={project.github} className='mx-2 border-2 border-black py-2 px-4 rounded-md text-sm text-Grayish-Blue hover:scale-110 transition cursor-pointer hover:drop-shadow-xl hover:bg-black hover:text-white'>GitHub Repo</a>
-                                <a href={project.liveSite} className='border-2 border-black py-2 px-4 rounded-md text-sm text-Grayish-Blue hover:scale-110 transition cursor-pointer hover:drop-shadow-xl hover:bg-black hover:text-white'>LiveSite</a>
+                                <div>
+                                <a href={project.github} className='block mx-2 border-2 border-black py-2 px-4 rounded-md text-sm text-gray-700 hover:scale-110 transition cursor-pointer hover:shadow-xl hover:bg-black hover:text-white mt-2 md:mt-0 md:ml-2'>GitHub Repo</a>
+                                <a href={project.liveSite} className='block border-2 border-black py-2 px-4 rounded-md text-sm text-gray-700 hover:scale-110 transition cursor-pointer hover:shadow-xl hover:bg-black hover:text-white mt-2 md:mt-0 md:ml-2'>LiveSite</a>
+                                </div>
                             </div>
                         ))}
                     </div>
