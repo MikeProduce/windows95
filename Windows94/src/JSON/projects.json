@@ -2,39 +2,39 @@
     "projects": [
       {
         "id": 1,
+        "title": "Windows 94 UI",
+        "description": "Replicated the UI of a windows 94 OS. Used Redux to keep track of state and tailwind for the styling",
+        "image": "ProjectImages/windows94.png",
+        "techStack": "React,Redux,Tailwind CSS",
+        "github": "https://github.com/MikeProduce/windows94.png",
+        "liveSite": "https://windows95-seven.vercel.app/"
+      },
+      {
+        "id": 2,
+        "title": "Bank Landing Page",
+        "description": "A frontendmentor challange that required me to make a static bank page site",
+        "image": "ProjectImages/bankLandingpage.png",
+        "techStack": "React,TailWind CSS,",
+        "github": "https://github.com/MikeProduce/front-end-challange",
+        "liveSite": "https://front-end-challange-gb4k.vercel.app/"
+      },
+      {
+        "id": 3,
+        "title": "Ecommerce static site",
+        "description": "A frontendmentor challange that required me to make a static ecommerce site",
+        "image": "ProjectImages/ecomerce.png",
+        "techStack": "HTML,CSS,JavaScript",
+        "github": "https://github.com/MikeProduce/ecommerce-product-page-main#built-with",
+        "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
+      },
+      {
+        "id": 4,
         "title": "Pokedex",
         "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
         "image": "ProjectImages/pokedex.png",
         "techStack": "I used HTML5, CSS, and Javascript for this project",
         "github": "https://github.com/MikeProduce/Pokedex-project",
         "liveSite": "https://mikeproduce.github.io/Pokedex-project/"
-      },
-      {
-        "id": 2,
-        "title": "Ecommerce static site",
-        "description": "A frontendmentor challange that required me to make a static ecommerce site",
-        "image": "ProjectImages/ecomerce.png",
-        "techStack": "HTML,CSS,JavaScript",
-        "github": "https://github.com/MikeProduce/ecommerce-product-page-main#built-with",
-        "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
-      },
-      {
-        "id": 3,
-        "title": "Pokedex",
-        "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
-        "image": "ProjectImages/pokedex.png",
-        "techStack": "HTML,CSS,JavaScript",
-        "github": "https://github.com/MikeProduce/Pokedex-project",
-        "liveSite": "https://mikeproduce.github.io/Pokedex-project/"
-      },
-      {
-        "id": 4,
-        "title": "Ecommerce static site",
-        "description": "A frontendmentor challange that required me to make a static ecommerce site",
-        "image": "ProjectImages/ecomerce.png",
-        "techStack": "HTML,CSS,JavaScript",
-        "github": "https://github.com/MikeProduce/ecommerce-product-page-main#built-with",
-        "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
       }
     ]
   }
