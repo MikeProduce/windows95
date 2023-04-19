@@ -1,6 +1,6 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { ModalLayout } from './ModalLayout.jsx';
-import  projectData from '../JSON/projects.json'
+import projectData from '../JSON/projects.json'
 import { useWindow } from '../customHook/customHook.jsx';
 
 
@@ -8,37 +8,45 @@ import { useWindow } from '../customHook/customHook.jsx';
 export const ProjectsModal = () => {
     const [projects, setProjects] = useState(projectData);
     const projectsArr = projects.projects;
-    const windowName = 'Projects' 
+    const windowName = 'Projects'
     const { addWindowHandler, onCloseModal, modalVisibility } = useWindow(windowName);
 
 
-      return (
+    return (
         <div className={`mx-2 h-3/4 w-62 top-24 sm:h-3/4 sm:w-11/12 absolute bg-white border-2 border-l-gray border-t-gray border-r-darkGray border-b-darkGray flex flex-col ${modalVisibility}`}>
-            <ModalLayout 
-                TitleDescription={windowName} 
-                addWindowHandler={addWindowHandler} 
+            <ModalLayout
+                TitleDescription={windowName}
+                addWindowHandler={addWindowHandler}
                 onCloseModal={onCloseModal}
-                >
-                <div className='h-full flex flex-col  overflow-y-auto bg-gray'>
-                    <h1 className='text-5xl text-center font-display'>Projects</h1>
-                    <p className='text-center mb-4 font-display text-2xl'>Things I've Built</p>
-                    <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 flex justify-center font-display mx-5'>
+            >
+                <div className="h-full flex flex-col overflow-y-auto px-10 py-10 font-display">
+                    <h1 className="text-5xl text-center font-bold text-gray-100 mt-8 mb-4">My Projects</h1>
+                    <p className="text-2xl text-center font-medium text-gray-100">Things I've Built</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mx-auto">
                         {projectsArr.map((project, index) => (
-                            <div className='m-5 bg-Very-Light-Gray mt-10 rounded-xl mx-2 border-2 border-black pb-4' key={index}>
-                                <img className='rounded-t-xl w-full object-cover' src={project.image} alt={project.image} />
-                                <h1 className='text-xl text-center p-4'>{project.title}</h1>
-                                <h1 className='text-md px-6 p-4'>{project.description}</h1>
-                                <p className='p-4'>Tech Stack: {project.techStack}</p>
-                                <div>
-                                <a href={project.github} className='block mx-2 border-2 border-black py-2 px-4 rounded-md text-sm text-gray-700 hover:scale-110 transition cursor-pointer hover:shadow-xl hover:bg-black hover:text-white mt-2 md:mt-0 md:ml-2'>GitHub Repo</a>
-                                <a href={project.liveSite} className='block border-2 border-black py-2 px-4 rounded-md text-sm text-gray-700 hover:scale-110 transition cursor-pointer hover:shadow-xl hover:bg-black hover:text-white mt-2 md:mt-0 md:ml-2'>LiveSite</a>
+                            <div className="bg-gray-100 shadow-lg overflow-hidden border-2" key={index}>
+                                <img className="h-64 w-full object-cover" src={project.image} alt={project.image} />
+                                <div className="p-6 ">
+                                    <h2 className="text-xl font-bold text-gray-100 mb-2">{project.title}</h2>
+                                    <p className="text-md text-gray-100 mb-4">{project.description}</p>
+                                    <p className="text-sm text-gray-100 mb-2">Tech Stack: {project.techStack}</p>
+                                    <div className="flex justify-between">
+                                        <a href={project.github} className="bg-gray-300 hover:bg-pink-400 hover:text-white py-2 px-4 rounded-md text-sm text-gray-800 cursor-pointer">
+                                            <span>GitHub Repo</span>
+                                        </a>
+                                        <a href={project.liveSite} className="bg-gray-300 hover:bg-pink-400 hover:text-white py-2 px-4 rounded-md text-sm text-gray-800 cursor-pointer">
+                                            <span>LiveSite</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
+
             </ModalLayout>
         </div>
     );
-    
+
 }

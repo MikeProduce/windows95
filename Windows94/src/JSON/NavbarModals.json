@@ -1,34 +1,28 @@
 {
-    "NavbarModals":[
+  "NavbarModals": [
     {
-        "id": 1,
-    "icon": "NavbarModal/AboutMe.png",
-    "label": "Contact Me!",
-    "title":"Contact Me!"
-  },
-  {
-    "id": 2,
-    "icon": "NavbarModal/project.png",
-    "label": "Projects",
-    "title": "Projects"   
-  },
-  {
-    "id": 3,
-    "icon": "NavbarModal/Resume.png",
-    "label": "Resume",
-    "title": "Resume"
-  },
-  {
-    "id": 4,
-    "icon": "NavbarModal/AboutMe.png",
-    "label": "About me",
-    "title": "Welcome to my page"   
-  },
-  {
-    "id": 5,
-    "icon": "NavbarModal/folder.png",
-    "label": "Technologies",
-    "title": "TechStack"    
-  }
-]
+      "id": 1,
+      "icon": "NavbarModal/AboutMe.png",
+      "label": "Contact Me!",
+      "title": "Contact Me!"
+    },
+    {
+      "id": 2,
+      "icon": "NavbarModal/project.png",
+      "label": "Projects",
+      "title": "Projects"
+    },
+    {
+      "id": 3,
+      "icon": "NavbarModal/AboutMe.png",
+      "label": "About me",
+      "title": "Welcome to my page"
+    },
+    {
+      "id": 4,
+      "icon": "NavbarModal/AboutMe.png",
+      "label": "About me",
+      "title": "Welcome to my page"
+    }
+  ]
 }
