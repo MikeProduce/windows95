@@ -15,7 +15,8 @@
       "description": "This application was used to resemble what a user would experience in a Ecommerce site",
       "image": "ProjectImages/Ecomerce.png",
       "techStack": "React,TailWind CSS,Mobile Responsive,Redux,React-Router-Dom,Express,MangoDB",
-      "github": "https://github.com/MikeProduce/ShopifyTailwind"
+      "github": "https://github.com/MikeProduce/ShopifyTailwind",
+      "liveSite": ""
     },
     {
       "id": 3,

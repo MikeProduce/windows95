@@ -35,9 +35,14 @@ export const ProjectsModal = () => {
                                         <a href={project.github} className="bg-gray-300 hover:bg-blue-400 hover:text-white py-2 px-4 rounded-md text-sm text-gray-800 cursor-pointer">
                                             <span>GitHub Repo</span>
                                         </a>
-                                        <a href={project.liveSite} className="bg-gray-300 hover:bg-blue-400 hover:text-white py-2 px-4 rounded-md text-sm text-gray-800 cursor-pointer">
-                                            <span>LiveSite</span>
-                                        </a>
+                                        {
+                                            project.liveSite === "" ? <div className="bg-gray-300 py-2 px-4 rounded-md text-sm text-gray-800">
+                                                no link exists </div> :
+                                                <a href={project.liveSite} className="bg-gray-300 hover:bg-blue-400 hover:text-white py-2 px-4 rounded-md text-sm text-gray-800 cursor-pointer">
+                                                    <span>LiveSite</span>
+                                                </a>
+                                        }
+
                                     </div>
                                 </div>
                             </div>
