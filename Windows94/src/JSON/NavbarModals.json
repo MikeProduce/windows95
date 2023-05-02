@@ -21,8 +21,8 @@
     {
       "id": 4,
       "icon": "NavbarModal/AboutMe.png",
-      "label": "About me",
-      "title": "Welcome to my page"
+      "label": "TechStack",
+      "title": "TechStack"
     }
   ]
 }

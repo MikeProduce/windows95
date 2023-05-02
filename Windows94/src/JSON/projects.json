@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Pokedex Application",
-      "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
+      "description": "This is a Pokedex Application that was built to help users gather data about different pokemon and was built after my original pokemon application was used before",
       "image": "ProjectImages/pokemonApplication.png",
       "techStack": "React,Tailwind CSS,Mobile Responsive,axios",
       "github": "https://github.com/MikeProduce/NewPokeDex",
