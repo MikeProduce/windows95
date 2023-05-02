@@ -14,13 +14,13 @@
     },
     {
       "id": 3,
-      "icon": "NavbarModal/AboutMe.png",
+      "icon": "NavbarModal/folder.png",
       "label": "About me",
       "title": "Welcome to my page"
     },
     {
       "id": 4,
-      "icon": "NavbarModal/AboutMe.png",
+      "icon": "NavbarModal/folder.png",
       "label": "TechStack",
       "title": "TechStack"
     }

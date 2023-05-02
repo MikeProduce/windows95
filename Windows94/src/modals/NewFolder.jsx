@@ -14,15 +14,7 @@ export const NewFolder = () => {
                 addWindowHandler={addWindowHandler}
                 onCloseModal={onCloseModal}
             >
-                <h1>Comparison of the two projects 5 months apart. I've learned a lot since then and I'm excited to see what I can do in the future.</h1>
-                <div className='h-full flex overflow-y-auto bg-gray'>
-                    <div>
-                        pokemon app
-                    </div>
-                    <div>
-                        new pokemon app
-                    </div>
-                </div>
+
             </ModalLayout>
         </div>
     );
