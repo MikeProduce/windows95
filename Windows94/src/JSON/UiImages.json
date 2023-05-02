@@ -1,6 +1,6 @@
 {
-"UiImages":[
-    { 
+  "UiImages": [
+    {
       "id": 1,
       "icon": "UiImages/Computer.png",
       "label": "My Computer"
@@ -9,11 +9,6 @@
       "id": 2,
       "icon": "UiImages/trash.png",
       "label": "Trash"
-    },
-    {   
-      "id": 3,
-      "icon": "UiImages/folder.png",
-      "label": "New Folder"
     }
   ]
 }

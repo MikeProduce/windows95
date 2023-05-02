@@ -11,6 +11,14 @@
     },
     {
       "id": 2,
+      "title": "Ecommerce Site",
+      "description": "This application was used to resemble what a user would experience in a Ecommerce site",
+      "image": "ProjectImages/Ecomerce.png",
+      "techStack": "React,TailWind CSS,Mobile Responsive,Redux,React-Router-Dom",
+      "github": "https://github.com/MikeProduce/ShopifyTailwind"
+    },
+    {
+      "id": 3,
       "title": "Bank Landing Page",
       "description": "A frontendmentor challange that required me to make a static bank page site",
       "image": "ProjectImages/bankLandingpage.png",
@@ -19,7 +27,7 @@
       "liveSite": "https://front-end-challange-gb4k.vercel.app/"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Ecommerce static site",
       "description": "A frontendmentor challange that required me to make a static ecommerce site",
       "image": "ProjectImages/ecomerce.png",
@@ -28,7 +36,7 @@
       "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Pokedex",
       "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
       "image": "ProjectImages/pokedex.png",
