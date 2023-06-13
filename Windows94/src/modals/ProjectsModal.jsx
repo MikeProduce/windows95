@@ -20,13 +20,15 @@ export const ProjectsModal = () => {
                 onCloseModal={onCloseModal}
             >
                 <div className="h-full flex flex-col overflow-y-auto px-10 py-10 font-display">
-                    <h1 className="text-5xl text-center font-bold text-gray-100 mt-8 mb-4">My Projects</h1>
-                    <p className="text-2xl text-center font-medium text-gray-100">Things I've Built</p>
-                    <p className="text-md text-center font-medium text-gray-100 mb-8">All of these projects are some of the things ive made to have fun and experiment with technology</p>
+                    <h1 className="text-5xl text-center font-bold text-gray-100 mt-8 mb-4">Portfolio Projects</h1>
+                    <p className="text-2xl text-center font-medium text-gray-100">Discover My Work</p>
+                    <p className="text-md text-center font-medium text-gray-100 mb-8">
+                        Explore a collection of projects that showcase my passion for technology and my commitment to innovation. Each project represents an opportunity for me to experiment, learn, and push the boundaries of what's possible. Dive into these creations that reflect my expertise and dedication in the field.
+                    </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mx-auto">
                         {projectsArr.map((project, index) => (
                             <div className="bg-gray-100 shadow-lg overflow-hidden border-2" key={index}>
-                                <img className="h-64 w-full object-cover" src={project.image} alt={project.image} />
+                                <img className="h-64 w-full object-cover object-center" src={project.image} alt={project.image} />
                                 <div className="p-6 ">
                                     <h2 className="text-xl font-bold text-gray-100 mb-2">{project.title}</h2>
                                     <p className="text-md text-gray-100 mb-4">{project.description}</p>

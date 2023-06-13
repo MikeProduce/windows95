@@ -2,6 +2,15 @@
   "projects": [
     {
       "id": 1,
+      "title": "Developers Blog",
+      "description": "Developers Blog is a dynamic platform where I share my insights, experiences, and knowledge as a developer.",
+      "image": "ProjectImages/PersonallyBlog.jpeg",
+      "techStack": "React,Tailwind CSS,Typescript,MangoDB,ExpressJS",
+      "github": "https://github.com/MikeProduce/socialMediaApp",
+      "liveSite": ""
+    },
+    {
+      "id": 2,
       "title": "Pokedex Application",
       "description": "This is a Pokedex Application that was built to help users gather data about different pokemon",
       "image": "ProjectImages/pokemonApplication.png",
@@ -10,7 +19,7 @@
       "liveSite": "https://new-poke-dex.vercel.app/"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Ecommerce Site",
       "description": "This application was used to resemble what a user would experience in a Ecommerce site",
       "image": "ProjectImages/Ecomerce.png",
@@ -19,22 +28,13 @@
       "liveSite": ""
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Bank Landing Page",
       "description": "A frontendmentor challange that required me to make a static bank page site",
       "image": "ProjectImages/bankLandingpage.png",
       "techStack": "React,TailWind CSS,Mobile Responsive",
       "github": "https://github.com/MikeProduce/front-end-challange",
       "liveSite": "https://front-end-challange-gb4k.vercel.app/"
-    },
-    {
-      "id": 4,
-      "title": "Ecommerce static site",
-      "description": "A frontendmentor challange that required me to make a static ecommerce site",
-      "image": "ProjectImages/ecomerce.png",
-      "techStack": "HTML,CSS,JavaScript",
-      "github": "https://github.com/MikeProduce/ecommerce-product-page-main#built-with",
-      "liveSite": "https://mikeproduce.github.io/ecommerce-product-page-main/"
     }
   ]
 }
