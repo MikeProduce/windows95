@@ -7,7 +7,7 @@
       "image": "ProjectImages/PersonallyBlog.jpeg",
       "techStack": "React,Tailwind CSS,Typescript,MangoDB,ExpressJS",
       "github": "https://github.com/MikeProduce/socialMediaApp",
-      "liveSite": "https://vercel.com/mikeproduce/personly"
+      "liveSite": "https://personly.vercel.app/"
     },
     {
       "id": 2,
