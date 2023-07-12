@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  window: [{itemName: 'Welcome to my page', isHidden: true}], // This item in the array starts here because we want this window to be open on load.
+  window: [{ itemName: 'Welcome to my page', isHidden: true }], // This item in the array starts here because we want this window to be open on load.
 };
-
 const windowSlice = createSlice({
   name: 'window',
   initialState,
@@ -29,8 +28,7 @@ const windowSlice = createSlice({
       }
     },
     toggleHidden: (state, action) => {
-      const itemName = action.payload; 
-      console.log(itemName);
+      const itemName = action.payload;
       const item = state.window.find((item) => item.itemName === itemName); // Find the window object with the matching name
       if (item) {
         item.isHidden = !item.isHidden; // Toggle the value of isHidden to show or hide the window
